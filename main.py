@@ -25,7 +25,8 @@ for y,line in enumerate(message):
                     with open("/dev/urandom", "rb") as random_file:
                         file.write(random_file.read(1000))
                         repo.index.commit('commit', author_date=datetime.strptime(f'2034-{x}-{y}', "%Y-%W-%w").isoformat())
-                        repo.remotes.origin.push()
+                        
+repo.remotes.origin.push()
 
 
 #28dec, måndagen med 1jan i veckan
